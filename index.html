@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+	<title>Canvas Sine Waves</title>
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- Custom Style file -->
+	<link type="text/css" rel="stylesheet" href="./appStyle.css">
+
+</head>
+<body>
+
+	<canvas></canvas>
+
+	<div id="control-box" class="controller " title="Controller">
+	  <h5 class="board-head">Wave Controller</h5>
+	  <div class="board-button">
+		<div class="form-group input-group">
+		  <label for="length">Position (Y axis):</label>
+		  <input type="range" class="custom-range" id="wave-y" min="0" max="" step="1">
+		</div>
+		<div class="form-group input-group">
+		  <label for="length">Length:</label>
+		  <input type="range" class="custom-range" id="length" min="0" max="0.1" step="0.01" value="0.01">
+		</div>
+		<div class="form-group input-group">
+		  <label for="amplitude">Amplitude:</label>
+		  <input type="range" class="custom-range" id="amplitude" min="-1000" max="1000" step="10" value="100">
+		</div>
+		<div class="form-group input-group">
+		  <label for="frequency">Frequency:</label>
+		  <input type="range" class="custom-range" id="frequency" min="-1" max="1" step="0.01" value="0.01">
+		</div>
+	  </div>
+
+	  <h5 class="board-head">Wave Colour</h5>
+	  <div class="board-button">
+		<div class="form-group input-group">
+		  <label for="hue">Hue:</label>
+		  <input type="range" class="custom-range" id="hue" min="0" max="300" step="10" value="100">
+		</div>
+		<div class="form-group input-group">
+		  <label for="start">Saturation:</label>
+		  <input type="range" class="custom-range" id="start" min="0" max="100" step="5" value="50">
+		</div>
+		<div class="form-group input-group">
+		  <label for="end">Lightness:</label>
+		  <input type="range" class="custom-range" id="end" min="0" max="100" step="5" value="50">
+		</div>
+	  </div>
+
+	  <h5 class="board-head">Background Colour</h5>
+	  <div class="board-button">
+		<div class="form-group input-group">
+		  <label for="red">Red:</label>
+		  <input type="range" class="custom-range" id="red" min="0" max="255" step="5" value="50">
+		</div>
+		<div class="form-group input-group">
+		  <label for="green">Green:</label>
+		  <input type="range" class="custom-range" id="green" min="0" max="255" step="5" value="50">
+		</div>
+		<div class="form-group input-group">
+		  <label for="blue">Blue:</label>
+		  <input type="range" class="custom-range" id="blue" min="0" max="255" step="5" value="50">
+		</div>
+		<div class="form-group input-group">
+		  <label for="alpha">Alpha:</label>
+		  <input type="range" class="custom-range" id="alpha" min="0" max="1" step="0.01" value="0.01">
+		</div>
+	  </div>
+	</div>
+
+	<!-- Jquery CDN link -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+	<!-- Jquery UI CDN link -->
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+
+	<!-- Custom Canvas JavaScript file -->
+    <script src="./canvas.js" type="text/javascript"></script>
+
+	<!-- Custom Controller JavaScript file -->
+    <script src="./controller.js" type="text/javascript"></script>
+
+</body>
+</html>
